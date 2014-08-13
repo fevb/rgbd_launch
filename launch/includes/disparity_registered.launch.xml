@@ -18,7 +18,7 @@
         respawn="$(arg respawn)">
     <!-- Use raw image for efficiency -->
     <remap from="left/image_rect" to="$(arg depth_registered)/sw_registered/image_rect_raw" />
-    <remap from="right" to="$(arg projector)" />
+    <remap from="right/camera_info" to="$(arg depth_registered)/camera_info" />
     <remap from="left/disparity" to="$(arg depth_registered)/disparity" />
 
     <param name="min_range" value="0.5" />
@@ -32,7 +32,7 @@
         respawn="$(arg respawn)">
     <!-- Use raw image for efficiency -->
     <remap from="left/image_rect" to="$(arg depth_registered)/hw_registered/image_rect_raw" />
-    <remap from="right" to="$(arg projector)" />
+    <remap from="right/camera_info" to="$(arg depth_registered)/camera_info" />
     <remap from="left/disparity" to="$(arg depth_registered)/disparity" />
 
     <param name="min_range" value="0.5" />
